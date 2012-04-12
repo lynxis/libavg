@@ -1,0 +1,19 @@
+FILE(GLOB wrapper_SRCS *.cpp)
+
+INCLUDE_DIRECTORIES(
+    ${Boost_INCLUDE_DIRS}
+    ${PYTHON_INCLUDE_DIRS}
+    ${LIBXML2_INCLUDE_DIR}
+    ${RSVG_INCLUDE_DIRS}
+    ${GTK2_INCLUDE_DIRS}
+)
+
+ADD_LIBRARY(avg MODULE ${wrapper_SRCS} ${player_SRCS})
+
+target_link_libraries(avg anim audio base conrad graphics lmfit imaging oscpack player video ${GTK2_LIBRARIES} ${FREETYPE_LIBRARIES} ${RSVG_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL_LIBRARY} ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
+
+install(TARGETS avg 
+    LIBRARY DESTINATION $PYTHON_SITEPACKAGES/libavg/
+    ARCHIVE DESTINATION $PYTHON_SITEPACKAGES/libavg/
+    )
+

@@ -1,0 +1,9 @@
+FILE(GLOB oscpack_SRCS *.cpp)
+
+INCLUDE_DIRECTORIES(
+    ${Boost_INCLUDE_DIRS}
+    ${PYTHON_INCLUDE_DIRS}
+    ${LIBXML2_INCLUDE_DIR}
+)
+
+ADD_LIBRARY(oscpack STATIC ${oscpack_SRCS})

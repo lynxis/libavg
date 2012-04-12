@@ -1,0 +1,77 @@
+
+/* Enable firewire camera support v.2 */
+#cmakedefine AVG_ENABLE_1394_2
+
+/* Enable Linux kernel multitouch */
+#cmakedefine AVG_ENABLE_MTDEV
+
+/* Enable parallel port support */
+#cmakedefine AVG_ENABLE_PARPORT
+
+/* Enable Video4Linux2 camera support */
+#cmakedefine AVG_ENABLE_V4L2
+
+/* Enable VDPAU support */
+#cmakedefine AVG_ENABLE_VDPAU
+
+/* Use the Apple OpenGL framework. */
+#cmakedefine HAVE_APPLE_OPENGL_FRAMEWORK
+
+/* define if the Boost::Thread library is available */
+#cmakedefine HAVE_BOOST_THREAD
+
+/* Define to 1 if you have the <libavcodec/vdpau.h> header file. */
+#cmakedefine HAVE_LIBAVCODEC_VDPAU_H
+
+/* Define to 1 if you have the <libavformat/avformat.h> header file. */
+#cmakedefine HAVE_LIBAVFORMAT_AVFORMAT_H
+
+/* define if the compiler implements namespaces */
+#cmakedefine HAVE_NAMESPACES
+
+/* Define if you have POSIX threads libraries and header files. */
+#cmakedefine HAVE_PTHREAD
+
+/* Define to 1 if you have the <vdpau/vdpau.h> header file. */
+#cmakedefine HAVE_VDPAU_VDPAU_H
+
+/* Define to 1 if you have the <windows.h> header file. */
+#cmakedefine HAVE_WINDOWS_H
+
+/* XI2_1 available */
+#cmakedefine HAVE_XI2_1
+
+/* XI2_2 available */
+#cmakedefine HAVE_XI2_2
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#cmakedefine LT_OBJDIR
+
+/* Name of package */
+#cmakedefine PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#cmakedefine PACKAGE_URL
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION
+
+/* Define to the necessary symbol if this constant uses a non-standard name on
+   your system. */
+#cmakedefine PTHREAD_CREATE_JOINABLE
+
+/* Version number of package */
+#cmakedefine VERSION

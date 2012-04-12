@@ -1,0 +1,8 @@
+FILE(GLOB triangulate_SRCS *.cpp)
+
+INCLUDE_DIRECTORIES(
+    ${PYTHON_INCLUDE_DIR}
+    ${LIBXML2_INCLUDE_DIR}
+)
+
+ADD_LIBRARY(triangulate STATIC ${triangulate_SRCS})
