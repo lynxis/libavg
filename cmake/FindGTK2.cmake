@@ -423,7 +423,7 @@ list(APPEND GTK2_LIBRARIES ${FREETYPE_LIBRARIES})
 foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
     if(_GTK2_component STREQUAL "gtk")
         _GTK2_FIND_INCLUDE_DIR(GTK2_GLIB_INCLUDE_DIR glib.h)
-        _GTK2_FIND_INCLUDE_DIR(GTK2_GLIBCONFIG_INCLUDE_DIR glibconfig.h)
+#        _GTK2_FIND_INCLUDE_DIR(GTK2_GLIBCONFIG_INCLUDE_DIR glibconfig.h)
         _GTK2_FIND_LIBRARY    (GTK2_GLIB_LIBRARY glib false true)
         
         _GTK2_FIND_INCLUDE_DIR(GTK2_GOBJECT_INCLUDE_DIR gobject/gobject.h)
@@ -432,6 +432,18 @@ foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
         _GTK2_FIND_INCLUDE_DIR(GTK2_GDK_PIXBUF_INCLUDE_DIR gdk-pixbuf/gdk-pixbuf.h)
         _GTK2_FIND_LIBRARY    (GTK2_GDK_PIXBUF_LIBRARY gdk_pixbuf false true)
 
+#        _GTK2_FIND_INCLUDE_DIR(GTK2_GDK_INCLUDE_DIR gdk/gdk.h)
+#        _GTK2_FIND_INCLUDE_DIR(GTK2_GDKCONFIG_INCLUDE_DIR gdkconfig.h)
+#        _GTK2_FIND_INCLUDE_DIR(GTK2_GTK_INCLUDE_DIR gtk/gtk.h)
+
+#        if(UNIX)
+#            _GTK2_FIND_LIBRARY    (GTK2_GDK_LIBRARY gdk-x11 false true)
+#            _GTK2_FIND_LIBRARY    (GTK2_GTK_LIBRARY gtk-x11 false true)
+#        else()
+#            _GTK2_FIND_LIBRARY    (GTK2_GDK_LIBRARY gdk-win32 false true)
+#            _GTK2_FIND_LIBRARY    (GTK2_GTK_LIBRARY gtk-win32 false true)
+#        endif()
+
         _GTK2_FIND_INCLUDE_DIR(GTK2_CAIRO_INCLUDE_DIR cairo.h)
         _GTK2_FIND_LIBRARY    (GTK2_CAIRO_LIBRARY cairo false false)
 
@@ -439,6 +451,9 @@ foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
 
         _GTK2_FIND_INCLUDE_DIR(GTK2_PANGO_INCLUDE_DIR pango/pango.h)
         _GTK2_FIND_LIBRARY    (GTK2_PANGO_LIBRARY pango false true)
+
+#        _GTK2_FIND_INCLUDE_DIR(GTK2_ATK_INCLUDE_DIR atk/atk.h)
+#        _GTK2_FIND_LIBRARY    (GTK2_ATK_LIBRARY atk false true)
 
 
     elseif(_GTK2_component STREQUAL "gtkmm")
@@ -513,16 +528,16 @@ foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
 
     if(_GTK2_component STREQUAL "gtk")
         FIND_PACKAGE_HANDLE_STANDARD_ARGS(GTK2_${_COMPONENT_UPPER} "Some or all of the gtk libraries were not found."
-            GTK2_GTK_LIBRARY
-            GTK2_GTK_INCLUDE_DIR
+#            GTK2_GTK_LIBRARY
+#            GTK2_GTK_INCLUDE_DIR
 
             GTK2_GLIB_INCLUDE_DIR
-            GTK2_GLIBCONFIG_INCLUDE_DIR
+#            GTK2_GLIBCONFIG_INCLUDE_DIR
             GTK2_GLIB_LIBRARY
 
-            GTK2_GDK_INCLUDE_DIR
-            GTK2_GDKCONFIG_INCLUDE_DIR
-            GTK2_GDK_LIBRARY
+#            GTK2_GDK_INCLUDE_DIR
+#            GTK2_GDKCONFIG_INCLUDE_DIR
+#            GTK2_GDK_LIBRARY
         )
     elseif(_GTK2_component STREQUAL "gtkmm")
         FIND_PACKAGE_HANDLE_STANDARD_ARGS(GTK2_${_COMPONENT_UPPER} "Some or all of the gtkmm libraries were not found."
