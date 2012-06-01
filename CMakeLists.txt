@@ -18,7 +18,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
                       )
 
 
-ADD_DEFINITIONS(-O2 -fPIC)
+ADD_DEFINITIONS(-O3 -ffast-math -Wall -pipe -Wno-invalid-offsetof -Woverloaded-virtual -Wswitch -Wuninitialized -Wempty-body)
 SET(CMAKE_FIND_FRAMEWORK LAST)
 
 SET(Boost_USE_STATIC_LIBS OFF)
