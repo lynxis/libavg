@@ -113,6 +113,7 @@
 #   _OUT_micro = Micro version number
 #   _gtkversion_hdr = Header file to parse
 #=============================================================
+
 function(_GTK2_GET_VERSION _OUT_major _OUT_minor _OUT_micro _gtkversion_hdr)
     file(READ ${_gtkversion_hdr} _contents)
     if(_contents)
@@ -170,6 +171,7 @@ function(_GTK2_FIND_INCLUDE_DIR _var _hdr)
         pango-1.0
         pangomm-1.4
         sigc++-2.0
+        lib/glib-2.0    # WTF is glibconfig.h doing there?
     )
 
     set(_suffixes)
@@ -423,7 +425,7 @@ list(APPEND GTK2_LIBRARIES ${FREETYPE_LIBRARIES})
 foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
     if(_GTK2_component STREQUAL "gtk")
         _GTK2_FIND_INCLUDE_DIR(GTK2_GLIB_INCLUDE_DIR glib.h)
-#        _GTK2_FIND_INCLUDE_DIR(GTK2_GLIBCONFIG_INCLUDE_DIR glibconfig.h)
+        _GTK2_FIND_INCLUDE_DIR(GTK2_GLIBCONFIG_INCLUDE_DIR glibconfig.h)
         _GTK2_FIND_LIBRARY    (GTK2_GLIB_LIBRARY glib false true)
         
         _GTK2_FIND_INCLUDE_DIR(GTK2_GOBJECT_INCLUDE_DIR gobject/gobject.h)
@@ -532,7 +534,7 @@ foreach(_GTK2_component ${GTK2_FIND_COMPONENTS})
 #            GTK2_GTK_INCLUDE_DIR
 
             GTK2_GLIB_INCLUDE_DIR
-#            GTK2_GLIBCONFIG_INCLUDE_DIR
+            GTK2_GLIBCONFIG_INCLUDE_DIR
             GTK2_GLIB_LIBRARY
 
 #            GTK2_GDK_INCLUDE_DIR
