@@ -1,9 +1,0 @@
-FILE(GLOB conrad_SRCS *.cpp)
-
-INCLUDE_DIRECTORIES(
-    ${Boost_INCLUDE_DIRS}
-    ${PYTHON_INCLUDE_DIRS}
-    ${LIBXML2_INCLUDE_DIR}
-)
-
-ADD_LIBRARY(conrad STATIC ${conrad_SRCS})
