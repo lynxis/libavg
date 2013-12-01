@@ -10,7 +10,7 @@ INCLUDE_DIRECTORIES(
 
 ADD_LIBRARY(avg MODULE ${wrapper_SRCS})
 
-target_link_libraries(avg anim audio base graphics lmfit imaging oscpack player video ${GTK2_LIBRARIES} ${FREETYPE_LIBRARIES} ${RSVG_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL_LIBRARY} ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(avg anim player lmfit imaging graphics video audio oscpack base ${GTK2_LIBRARIES} ${FREETYPE_LIBRARIES} ${RSVG_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL_LIBRARY} ${PYTHON_LIBRARIES} ${Boost_LIBRARIES} ${AVCODEC_LIBRARIES} ${AVFORMAT_LIBRARIES} ${FFMPEG_LIBRARIES} ${SWSCALE_LIBRARIES})
 
 install(TARGETS avg 
     LIBRARY DESTINATION $PYTHON_SITEPACKAGES/libavg/
