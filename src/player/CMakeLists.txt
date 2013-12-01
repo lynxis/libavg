@@ -111,5 +111,5 @@ IF(AVG_ENABLE_XINPUTMT)
     SET(player_SRCS ${player_SRCS} XInputMTInputDevice.cpp)
 ENDIF()
 
-ADD_LIBRARY(player STATIC ${player_SRCS}) 
+ADD_LIBRARY(player STATIC ${player_SRCS})
 
