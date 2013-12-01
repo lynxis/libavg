@@ -8,7 +8,7 @@ INCLUDE_DIRECTORIES(
     ${GTK2_INCLUDE_DIRS}
 )
 
-ADD_LIBRARY(avg MODULE ${wrapper_SRCS} ${player_SRCS})
+ADD_LIBRARY(avg MODULE ${wrapper_SRCS})
 
 target_link_libraries(avg anim audio base graphics lmfit imaging oscpack player video ${GTK2_LIBRARIES} ${FREETYPE_LIBRARIES} ${RSVG_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL_LIBRARY} ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 
