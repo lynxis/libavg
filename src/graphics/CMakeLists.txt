@@ -61,18 +61,28 @@ SET(graphics_SRCS
     TextureMover.cpp
     VertexArray.cpp
     VertexData.cpp
-    X11Display.cpp
 )
 
-## egl
-# CGLContext.cpp
-# EGLContext.cpp
-# WGLContext.cpp
+IF(ENABLE_EGL_SUPPORT)
+    SET(graphics_SRCS ${graphics_SRCS} CGLContext.cpp EGLContext.cpp WGLContext.cpp)
+ENDIF()
 
 ## platform specific 
-# AppleDisplay.cpp
-# BCMDisplay.cpp
-# WinDisplay.cpp
+IF(APPLE)
+    SET(graphics_SRCS ${graphics_SRCS} AppleDisplay.cpp)
+ENDIF()
+
+IF(WINDOWS)
+    SET(graphics_SRCS ${graphics_SRCS} WinDisplay.cpp)
+ENDIF()
+
+IF(UNIX)
+    SET(graphics_SRCS ${graphics_SRCS} X11Display.cpp)
+ENDIF()
+
+IF(RASPBERRY)
+    SET(graphics_SRCS ${graphics_SRCS} BCMDisplay.cpp)
+ENDIF()
 
 ##  testing
 # benchmarkgraphics.cpp

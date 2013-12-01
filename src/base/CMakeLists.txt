@@ -38,8 +38,9 @@ SET(base_SRCS
     XMLHelper.cpp
 )
 
-## windows foo
-#DlfcnWrapper.cpp
+IF(WINDOWS)
+    SET(base_SRCS ${base_SRCS} DlfcnWrapper.cpp)
+ENDIF()
 
 ## testing
 # testbase.cpp

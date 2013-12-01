@@ -9,6 +9,7 @@ OPTION(AVG_ENABLE_XINPUTMT "enable support for Xinput MT devices" OFF)
 OPTION(AVG_ENABLE_VDPAU "enable support for VDPAU" OFF)
 OPTION(AVG_ENABLE_V4L2 "enable support for V4L2 devices" OFF)
 OPTION(AVG_ENABLE_1394_2 "enable support for firewire / 1394 devices" OFF)
+OPTION(RASPBERRY "enable support for raspberry specific graphic driver (broadcom)" OFF)
 OPTION(HAVE_APPLE_OPENGL_FRAMEWORK "enable support for VDPAU devices TODO DESCR" OFF)
 
 SET(CMAKE_INSTALL_PREFIX /usr/local)
@@ -65,5 +66,13 @@ UNSET(PTHREAD_CREATE_JOINABLE)
 SET(HAVE_NAMESPACES)
 SET(HAVE_BOOST_THREAD)
 UNSET(HAVE_APPLE_OPENGL_FRAMEWORK)
+
+IF(CYGWIN)
+    SET(WINDOWS)
+ENDIF()
+
+IF(MSVC)
+    SET(WINDOWS)
+ENDIF()
 
 ADD_SUBDIRECTORY(src)
