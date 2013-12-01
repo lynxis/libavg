@@ -10,6 +10,7 @@ SET(notworking_SRCS
     DSHelper.cpp
     DSSampleGrabber.cpp
 )
+
 SET(imaging_SRCS
     Blob.cpp
     Camera.cpp
@@ -27,8 +28,11 @@ SET(imaging_SRCS
     TrackerThread.cpp
     V4LCamera.cpp
     checktracking.cpp
-    testimaging.cpp
     trackerconfigdtd.cpp
 )
+
+## testing
+# testimaging.cpp
+
 
 ADD_LIBRARY(imaging STATIC ${imaging_SRCS})

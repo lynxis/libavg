@@ -15,6 +15,9 @@ SET(player_SRCS
     Arg.cpp
     ArgBase.cpp
     ArgList.cpp
+    BitmapManager.cpp
+    BitmapManagerMsg.cpp
+    BitmapManagerThread.cpp
     BlurFXNode.cpp
     CameraNode.cpp
     Canvas.cpp
@@ -30,8 +33,10 @@ SET(player_SRCS
     DivNode.cpp
     Event.cpp
     EventDispatcher.cpp
+    ExportedObject.cpp
     FXNode.cpp
     FilledVectorNode.cpp
+    FontStyle.cpp
     HueSatFXNode.cpp
     Image.cpp
     ImageNode.cpp
@@ -41,11 +46,10 @@ SET(player_SRCS
     MainCanvas.cpp
     MaterialInfo.cpp
     MeshNode.cpp
+    MessageID.cpp
     MouseEvent.cpp
     MultitouchInputDevice.cpp
     Node.cpp
-    NodeDefinition.cpp
-    NodeRegistry.cpp
     NullFXNode.cpp
     OGLSurface.cpp
     OffscreenCanvas.cpp
@@ -54,6 +58,10 @@ SET(player_SRCS
     PluginManager.cpp
     PolyLineNode.cpp
     PolygonNode.cpp
+    Publisher.cpp
+    PublisherDefinition.cpp
+    PublisherDefinitionRegistry.cpp
+    PythonLogSink.cpp
     RasterNode.cpp
     RectNode.cpp
     SDLDisplayEngine.cpp
@@ -62,6 +70,7 @@ SET(player_SRCS
     ShadowFXNode.cpp
     Shape.cpp
     SoundNode.cpp
+    SubscriberInfo.cpp
     TUIOInputDevice.cpp
     TestHelper.cpp
     TextEngine.cpp
@@ -71,14 +80,20 @@ SET(player_SRCS
     TrackerCalibrator.cpp
     TrackerInputDevice.cpp
     TrackerTouchStatus.cpp
+    TypeDefinition.cpp
+    TypeRegistry.cpp
     VectorNode.cpp
+    VersionInfo.cpp
     VideoNode.cpp
     VideoWriter.cpp
     VideoWriterThread.cpp
     WordsNode.cpp
-    testcalibrator.cpp
-    testplayer.cpp
+    WrapPython.cpp
 )
+
+## testing
+#    testcalibrator.cpp
+#    testplayer.cpp
 
 IF(MTDEV)
     SET(player_SRCS ${player_SRCS} LibMTDevInputDevice.cpp)

@@ -1,4 +1,3 @@
-FILE(GLOB base_SRCS *.cpp)
 
 INCLUDE_DIRECTORIES(
     ${PYTHON_INCLUDE_DIRS}
@@ -9,9 +8,9 @@ INCLUDE_DIRECTORIES(
 SET(base_SRCS 
     Backtrace.cpp
     BezierCurve.cpp
-    CmdLine.cpp
     ConfigMgr.cpp
     CubicSpline.cpp
+    DAG.cpp
     DirEntry.cpp
     Directory.cpp
     Exception.cpp
@@ -25,18 +24,25 @@ SET(base_SRCS
     ProfilingZone.cpp
     ProfilingZoneID.cpp
     ScopeTimer.cpp
+    StandardLogSink.cpp
     StringHelper.cpp
     Test.cpp
     TestSuite.cpp
+    ThreadHelper.cpp
     ThreadProfiler.cpp
     TimeSource.cpp
     Triangle.cpp
     UTF8String.cpp
-    VersionInfo.cpp
     WideLine.cpp
+    WorkerThread.cpp
     XMLHelper.cpp
-    testbase.cpp
 )
+
+## windows foo
+#DlfcnWrapper.cpp
+
+## testing
+# testbase.cpp
 
 ADD_SUBDIRECTORY(triangulate)
 

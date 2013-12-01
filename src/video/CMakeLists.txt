@@ -5,20 +5,21 @@ INCLUDE_DIRECTORIES(
 )
 
 SET(video_SRCS 
-    AsyncDemuxer.cpp
     AsyncVideoDecoder.cpp
     AudioDecoderThread.cpp
-    FFMpegDecoder.cpp
     FFMpegDemuxer.cpp
-    FrameAge.cpp
-    PacketVideoMsg.cpp
+    FFMpegFrameDecoder.cpp
+    SyncVideoDecoder.cpp
+    VDPAUDecoder.cpp
+    VDPAUHelper.cpp
     VideoDecoder.cpp
     VideoDecoderThread.cpp
     VideoDemuxerThread.cpp
     VideoInfo.cpp
     VideoMsg.cpp
-    testvideo.cpp
 )
+## testing
+# testvideo.cpp
 
 IF(VDPAU)
     SET(video_SRCS ${video_SRCS} VDPAU.cpp AVCCOpaque.cpp)
