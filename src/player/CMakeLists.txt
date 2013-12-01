@@ -95,19 +95,19 @@ SET(player_SRCS
 #    testcalibrator.cpp
 #    testplayer.cpp
 
-IF(MTDEV)
+IF(AVG_ENABLE_MTDEV)
     SET(player_SRCS ${player_SRCS} LibMTDevInputDevice.cpp)
 ENDIF()
 
-IF(MACTRACKPAD)
+IF(AVG_ENABLE_MACTRACKPAD)
     SET(player_SRCS ${player_SRCS} AppleTrackpadInputDevice.cpp)
 ENDIF()
 
-IF(WIN7TOUCH)
+IF(AVG_ENABLE_WIN7TOUCH)
     SET(player_SRCS ${player_SRCS} Win7TouchInputDevice.cpp)
 ENDIF()
 
-IF(XINPUTMT)
+IF(AVG_ENABLE_XINPUTMT)
     SET(player_SRCS ${player_SRCS} XInputMTInputDevice.cpp)
 ENDIF()
 
