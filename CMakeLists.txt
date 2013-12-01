@@ -9,7 +9,6 @@ OPTION(AVG_ENABLE_XINPUTMT "enable support for Xinput MT devices TODO DESCR" OFF
 OPTION(AVG_ENABLE_VDPAU "enable support for VDPAU devices TODO DESCR" OFF)
 OPTION(AVG_ENABLE_V4L2 "enable support for VDPAU devices TODO DESCR" OFF)
 OPTION(AVG_ENABLE_1394_2 "enable support for VDPAU devices TODO DESCR" OFF)
-OPTION(AVG_ENABLE_PARPORT "enable support for VDPAU devices TODO DESCR" OFF)
 OPTION(HAVE_APPLE_OPENGL_FRAMEWORK "enable support for VDPAU devices TODO DESCR" OFF)
 
 SET(CMAKE_INSTALL_PREFIX /usr/local)
